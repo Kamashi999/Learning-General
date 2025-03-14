@@ -12,16 +12,18 @@ Warstwa internetowa - planuje trase i przypisuje adresy komputer (...) -> router
 Warstwa dostępu do internetu - sumuje wszystkie czynności i wysyła poprzez medium (np. kabel ethernet)
 
 Użytkownik - enkapsulacja
-|
-|
-|
+
 ---> Serwer - dekapsulacja (proces odwrotny, od warstwy dostępu do aplikacji)
 
 ## Pojęcia
 
 NAT - tłumaczy adresy prywatne na publiczne, umożliwiając komunikację z internetem.
+
 DNS - konwertuje www.wp.pl na adres np. 123.123.123.123, dzięki czemu nie trzeba wpisywać adresu.
+
 DHCP - pozwala na dynamiczne przydzielenie adresu IP w sieci.
+
 Firewall - filtruje ruch sieciowy, blokując potencjalnie niebezpieczne lub nieautoryzowane połączenia.
+
 
 Serwer FTP - jest to serwer plików głównie tworzony na potrzeby łatwego przesyłania plików między komputerami w jednej sieci
