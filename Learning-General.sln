@@ -5,6 +5,8 @@ VisualStudioVersion = 17.13.35806.99 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learning-General", "Learning-General\Learning-General.csproj", "{D5810255-19AA-4CBE-90D4-56609F9EF0CD}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Python Docking (by Docker)", "Python Docking (by Docker)\Python Docking (by Docker).pyproj", "{454BC2DC-67A0-40D7-B403-0D8C6A5F44BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{D5810255-19AA-4CBE-90D4-56609F9EF0CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5810255-19AA-4CBE-90D4-56609F9EF0CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5810255-19AA-4CBE-90D4-56609F9EF0CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{454BC2DC-67A0-40D7-B403-0D8C6A5F44BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{454BC2DC-67A0-40D7-B403-0D8C6A5F44BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
