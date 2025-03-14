@@ -6,10 +6,15 @@ Jest potrzebne, aby istniało porozumienie między dystrybutorami różnych serw
 Jest to zbiór protokołów dzięki którym łączymy się z internetem, W jego skład wchodzą protokoły TCP i UDP (ten drugi jest do lżejszych plików).
 
 Posiadamy 4 warstwy:
+
 Warstwa aplikacji - odpowiada za odbiór żądania od użytkownika
+
 Warstwa transportowa - rozbija żądanie na mniejsze części
+
 Warstwa internetowa - planuje trase i przypisuje adresy komputer (...) -> router (...) -> serwer (...)
+
 Warstwa dostępu do internetu - sumuje wszystkie czynności i wysyła poprzez medium (np. kabel ethernet)
+
 
 Użytkownik - enkapsulacja
 
