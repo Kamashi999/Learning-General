@@ -38,3 +38,21 @@ wszystko działało. Również wazna była konfiguracja (nano /etc/vsftpd/vsftpd
 Fedora używa firewalld, należy popracować nad konfiguracją przez terminal tej usługi.
 
 Przy konfiguracji serwera Ftp czy Apache, warto zwrócić uwagę na "sestatus / setenforce 0" i firewall, one zazwyczaj blokują działanie aplikacji.
+
+Połączenie (aktywne/pasywne):
+
+Aktywne - Klient inicjuje połączenie na port 21 (kontrolne).
+
+Serwer odpowiada i próbuje nawiązać połączenie zwrotne do klienta na losowy port >1024.
+
+Problem: Jeśli klient jest za NAT-em, firewallem lub VPN-em, połączenie zwrotne może zostać zablokowane.
+
+
+Pasywne - Klient inicjuje połączenie na port 21 (kontrolne).
+
+Klient prosi serwer o port do przesyłania danych.
+
+Serwer zwraca losowy port >1024, na który klient się łączy.
+
+Połączenie wychodzące zawsze inicjuje klient, więc działa lepiej przez NAT/firewalle.
+
