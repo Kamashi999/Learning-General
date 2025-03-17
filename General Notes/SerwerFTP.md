@@ -36,3 +36,5 @@ Problemem w stworzeniu serwera FTP na Fedorze, okazał się firewall ze strony g
 wszystko działało. Również wazna była konfiguracja (nano /etc/vsftpd/vsftpd.conf).
 
 Fedora używa firewalld, należy popracować nad konfiguracją przez terminal tej usługi.
+
+Przy konfiguracji serwera Ftp czy Apache, warto zwrócić uwagę na "sestatus / setenforce 0" i firewall, one zazwyczaj blokują działanie aplikacji.
