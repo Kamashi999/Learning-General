@@ -55,3 +55,75 @@ Red Hat
 
 **Uwaga:** Wazuh Manager nie może być zainstalowany na systemie Windows.
 
+## Instalacja agenta Wazuh na Fedorze i Ubuntu
+
+### Pobieranie agenta
+
+1. Na **dashboardzie Wazuh** dodaj nowego agenta.
+2. Wybierz odpowiedni pakiet w zależności od systemu:
+   - **Fedora**: `.rpm`
+   - **Ubuntu**: `.deb`
+3. Podaj adres **Wazuh Managera**.
+
+### Instalacja agenta na Fedorze (DEB)
+
+Najpierw upewnij się, że masz `dpkg`:
+
+```bash
+sudo apt update && sudo apt install -y dpkg
+```
+Pobierz i zainstaluj agenta:
+
+```bash
+wget https://packages.wazuh.com/4.x/apt/pool/main/w/wazuh-agent/wazuh-agent_4.11.1-1_amd64.deb && sudo WAZUH_MANAGER='192.168.0.24' WAZUH_AGENT_NAME='Ubuntu' dpkg -i ./wazuh-agent_4.11.1-1_amd64.deb
+```
+
+Dodaje agenta do managera o ip 192.168.0.24 (adres ip lokalny managera), o nazwie Ubuntu.
+
+### Konfiguracja agenta (Jeżeli automatycznie nie zostanie dodany)
+
+Edytuj plik konfiguracyjny, aby dodać adres menedżera Wazuh:
+
+```bash
+sudo nano /var/ossec/etc/ossec.conf
+```
+
+Dodaj lub edytuj sekcję:
+
+```xml
+<manager>
+  <address>192.168.0.24</address>
+</manager>
+```
+
+Zapisz i zamknij plik.
+
+### Uruchamianie agenta
+
+```bash
+sudo systemctl enable wazuh-agent
+sudo systemctl start wazuh-agent
+```
+
+### Wyłączenie SELinux na czas instalacji (opcjonalnie)
+
+Jeśli SELinux blokuje instalację, tymczasowo go wyłącz:
+
+```bash
+sudo setenforce 0
+```
+
+Po instalacji włącz go ponownie:
+
+```bash
+sudo setenforce 1
+```
+
+### Sprawdzanie logów agenta
+
+Aby monitorować działanie agenta:
+
+```bash
+sudo tail -f /var/ossec/logs/ossec.log
+```
+lub poprzez dashboard
