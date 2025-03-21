@@ -127,3 +127,31 @@ Aby monitorować działanie agenta:
 sudo tail -f /var/ossec/logs/ossec.log
 ```
 lub poprzez dashboard
+
+# Wazuh + ELK - All-in-One Deployment
+
+##  Wprowadzenie
+
+**Wazuh** to open-source'owy system SIEM (Security Information and Event Management), który pozwala na monitorowanie bezpieczeństwa w czasie rzeczywistym. 
+
+**ELK Stack** (Elasticsearch, Logstash, Kibana) jest używany do przechowywania, przetwarzania i wizualizacji logów.
+
+Ten poradnik opisuje **instalację all-in-one**, czyli uruchomienie **Wazuh + ELK na jednej maszynie**.
+
+**Pełna dokumentacja**: [Wazuh + ELK All-in-One Deployment](https://documentation.wazuh.com/4.5/deployment-options/elastic-stack/all-in-one-deployment/index.html)
+
+---
+
+## 🔹 Co to jest ELK i dlaczego warto go doinstalować do Wazuh?
+
+### **Czym jest ELK?**
+**ELK** to zestaw narzędzi:
+- **Elasticsearch** – przechowuje i indeksuje logi
+- **Logstash** – przetwarza logi przed wysłaniem do Elasticsearch
+- **Kibana** – wizualizuje logi i pozwala na analizę danych
+
+### **Dlaczego warto używać ELK z Wazuh?**
+**Łatwiejsza analiza logów** – zamiast przeglądać surowe logi, można używać czytelnych dashboardów w Kibana.  
+**Szybkie wykrywanie incydentów** – ELK pozwala na błyskawiczne filtrowanie i wyszukiwanie zdarzeń.  
+**Automatyczne alerty** – możliwość ustawienia powiadomień na podejrzane aktywności.  
+**Wykresy i statystyki** – lepsze zrozumienie zagrożeń w systemie.  
